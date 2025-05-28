@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Peter Jaba Base</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #faf7f0;
+    color: #3a2e1d;
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, #8f704a 0%, #cbbf92 100%);
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem 4rem 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  header h1 {
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin-bottom: 0.4rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  header p {
+    font-weight: 300;
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+  main {
+    max-width: 960px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  section {
+    margin-bottom: 4rem;
+  }
+  h2 {
+    color: #7e6241;
+    font-weight: 600;
+    font-size: 2rem;
+    border-bottom: 3px solid #cbbf92;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  /* About Section */
+  #about p {
+    max-width: 700px;
+  }
+
+  /* Products Section */
+  .products-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .product-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  .product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+  }
+  .product-card:hover .product-image {
+    filter: brightness(0.9);
+  }
+  .product-info {
+    padding: 1rem 1.25rem 1.5rem 1.25rem;
+    flex-grow: 1;
+  }
+  .product-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    color: #705c30;
+  }
+  .product-info p {
+    font-size: 0.95rem;
+    color: #6b5e3c;
+  }
+
+  /* Contact Section */
+  form {
+    max-width: 480px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1.8rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  }
+  form label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    color: #564d2e;
+  }
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    width: 100%;
+    padding: 0.65rem 0.8rem;
+    margin-bottom: 1rem;
+    border: 2px solid #cbbf92;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  }
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form textarea:focus {
+    border-color: #8f704a;
+    outline: none;
+  }
+  form button {
+    display: inline-block;
+    background: #8f704a;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+  }
+  form button:hover {
+    background: #705c30;
+  }
+  .thank-you-message {
+    text-align: center;
+    color: #705c30;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+    header p {
+      font-size: 1rem;
+    }
+  }
+
+</style>
+</head>
+<body>
+<header>
+  <h1>Muguka Wellness</h1>
+  <p>Nature's gift for vitality and wellness — Pure Muguka products for your daily boost</p>
+</header>
+
+<main>
+  <section id="about" aria-label="About Muguka Wellness Business">
+    <h2>About Muguka</h2>
+    <p>
+      Muguka is a traditional herb renowned for its natural healing properties and energy-boosting benefits. Our business is dedicated to sourcing and providing the highest quality Muguka in various forms — from dried herbs to finely crafted products — to enhance your health and vitality naturally.
+    </p>
+  </section>
+
+  <section id="products" aria-label="Product offerings">
+    <h2>Our Products</h2>
+    <div class="products-grid">
+      <div class="product-card" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1524594157362-175d5e14f9a5?auto=format&fit=crop&w=400&q=80" alt="Packaged dried Muguka herb" class="product-image" />
+        <div class="product-info">
+          <h3>Dried Muguka Herb</h3>
+          <p>Handpicked dried Muguka herb, perfect for brewing your own natural teas to rejuvenate your body and mind.</p>
+        </div>
+      </div>
+      <div class="product-card" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1510626176961-4b99f4a469d9?auto=format&fit=crop&w=400&q=80" alt="Muguka capsules in bottle" class="product-image" />
+        <div class="product-info">
+          <h3>Muguka Capsules</h3>
+          <p>Convenient and potent Muguka extract capsules for those busy days when you need a quick natural boost.</p>
+        </div>
+      </div>
+      <div class="product-card" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=80" alt="Muguka tea brewing in cup" class="product-image" />
+        <div class="product-info">
+          <h3>Muguka Tea Blend</h3>
+          <p>A soothing Muguka herbal tea blend crafted for relaxation and wellness, perfect any time of day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" aria-label="Contact Muguka Wellness">
+    <h2>Contact Us</h2>
+    <form id="contact-form" aria-label="Contact form for inquiries">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email address" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Write your inquiry or message here" required></textarea>
+
+      <button type="submit">Send Message</button>
+      <p class="thank-you-message" id="thank-you-message" role="alert" style="display:none;">Thank you for contacting us! We will get back to you shortly.</p>
+    </form>
+  </section>
+</main>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const thankYouMsg = document.getElementById('thank-you-message');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Here we simulate sending data - no backend is set up
+    // Simply clear and show thank you message
+    form.reset();
+    thankYouMsg.style.display = 'block';
+
+    setTimeout(() => {
+      thankYouMsg.style.display = 'none';
+    }, 5000);
+  });
+</script>
+
+</body>
+</html>
+
